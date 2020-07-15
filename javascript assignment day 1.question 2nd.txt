@@ -1,0 +1,35 @@
+1.var: 
+1.The scope of a variable defined with the keyword “var” is limited to the “function” within which it is defined. If it is defined outside any function, the scope of the variable is global.
+var is “function scoped”.
+2.A var variable can be redeclared and updated.
+
+ex.function ofnumbers(){
+  var a =10;
+  console.log(a);  // output 10
+  if(true){
+   var a=20;
+   console.log(a); // output 20
+  }
+  console.log(a);  // output 20
+}
+
+2.let: 
+1.The scope of a variable defined with the keyword “let” or “const” is limited to the “block” defined by curly braces i.e. {} .
+“let” and “const” are“block scoped”.
+2.A let variable be be updated but not redeclared.
+
+ex.function ofnumbers(){
+  let a =10;
+  let a =20; //throws syntax error
+  console.log(a); 
+}
+
+3.const: 
+1.The scope of a variable defined with the keyword “const” is limited to the block defined by curly braces. However if a variable is defined with keyword const, it cannot be reassigned.
+“const” cannot be re-assigned to a new value. However it CAN be mutated.
+3This  variable is cant be changed
+
+ex.function ofnumbers(){
+  const MY_VARIABLE =10;
+  console.log(MY_VARIABLE);  //output 10 
+}
