@@ -1,0 +1,53 @@
+1.console.log is the usual method we use to log values out to the console:
+
+const name = 'Alligator';
+console.log('Hello', name); 
+
+2. we can access to more logging methods like warn, info and error:
+
+console.info('Just FYI');
+console.warn('Lookout!');
+console.error('Boom ');
+
+3.console.trace:
+
+function hello(name = 'Alligator') {
+  console.trace('name:', name);
+  return `Hello ${name}!`;
+}
+hello();
+
+4.console.dir & console.dirxml
+console.dir prints out objects in a nice formatted way:
+
+const fancyThings = {
+  car: ' Ferrari',
+  watch: ' Cartier',
+  clothing: {
+    shoes: ' Christian Louboutin',
+    dress: ' Versace'
+  },
+  boat: ' Sunseeker'
+}
+
+5.console.dir(fancyThings);
+
+6.You can clear the console with console.clear:
+
+console.clear();
+
+7.The console.count method is used to count the number of times it has been invoked with the same provided label. For example, here we have two counters, one for even values and one for odd values:
+
+[1, 2, 3, 4, 5].forEach(nb => {
+  if (nb % 2 === 0) {
+    console.count('even');
+  } else {
+    console.count('odd');
+  }
+});
+
+8.Timing
+As we’ve showed in this short post, you can start a timer with console.time and then end it with console.endTime
+
+9.console.group and console.groupEnd to group console messages together with an optional label. Notice also how a group can be nested into another one:
+
