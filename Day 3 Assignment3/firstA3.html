@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piya Ghadge</title>
+</head>
+<body> 
+    <h2 style ="text-align:center;">Javascript to find odd or even number! </h2>
+    <label>Enter number </label><br/>
+    <input type ="number" name ="" id ="oddeven" onekeyup="ischeck()">
+
+    <script>
+      function ischeck()
+      {
+        var num = document .getElementById('oddeven').value;
+        if ((num%2)=== 0){
+          document.getElementById('showmsg').innerHTML = "Hurray ! Number "+ num+"is an even number ";
+
+        }
+        else{
+          document.getElementById('showmsg').innerHTML = "oh no ! Number "+ num+"is not an even number ";
+        }
+        if (num == ""){
+          document.getElementById('showmsg').innerHTML = "Null ";
+        }
+
+      }
+    </script>
+
+</body>
+</html> 
+ 
