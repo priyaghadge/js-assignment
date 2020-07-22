@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Assignment</title>
+    <link rel="stylesheet"href="style.css"/>
+    
+</head>
+<body>
+    <button class ="btn" data-color="red">Red</button>
+    <button class ="btn" data-color="blue">Blue</button>
+    <button class ="btn" data-color="green">Green</button>
+    <button class ="btn" data-color="yellow">Yellow</button>
+    <div class="box">
+        </div>
+
+        <script>
+            const btn=document.querySelectorAll(".btn");
+            const box=document.querySelector(".box");
+
+            for (Let i=0;i<btn.length;i++){
+                btn[i].addEventListener("click",function(){
+                    box.style.background=this.getAttribute("data-color");
+                    this.style.color=this.getAttribute("data-color");
+                })
+            }
+            </script>
+
+</body>
+</html>
